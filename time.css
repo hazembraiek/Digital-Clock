@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(images/bg-stars.svg);
+  background-size: cover;
+  position: relative;
+  background-color: hsl(235, 16%, 14%);
+  font-family: "Quicksand", sans-serif;
+  padding: 10px;
+}
+
+.header__container {
+  width: 1440px;
+  text-align: center;
+  position: relative;
+}
+
+.image_pattern {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.header__title {
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 6px;
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 150px;
+}
+
+.header__time-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 662px) {
+  .header__title {
+    margin-bottom: 90px;
+    font-size: 24px;
+  }
+  .header__time-container {
+  }
+}
+
+.date_container {
+  width: calc(80% / 4);
+  position: relative;
+}
+
+.date_number {
+  font-size: 10rem;
+  padding: 46px;
+  border-radius: 20px;
+  background-color: hsl(236, 21%, 26%);
+  font-weight: 600;
+  color: hsl(345, 95%, 68%);
+  letter-spacing: -10px;
+  box-shadow: 3px 16px 11px black;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 662px) {
+  .date_number {
+    letter-spacing: 0;
+    font-size: 3rem;
+    border-radius: 4px;
+    padding: 0;
+  }
+  .date_container {
+    width: calc(90% / 4);
+  }
+}
+
+.date_container::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 20px);
+  height: 3px;
+  top: 40%;
+  right: 9px;
+  transform: translateY(-50%);
+  z-index: 1;
+  box-shadow: 0px 0px 20px black;
+}
+
+.date_number::before,
+.date_number::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: hsl(234, 17%, 12%);
+  border-radius: 50%;
+  top: 50%;
+}
+
+@media (max-width: 662px) {
+  .date_container::before {
+    width: calc(100% - 10px);
+    top: 31%;
+    right: 5px;
+  }
+  .date_number::before,
+  .date_number::after {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.date_number::after {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.date_number::before {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.date_text {
+  font-size: 20px;
+  color: hsl(237, 18%, 59%);
+  font-weight: bold;
+  letter-spacing: 5px;
+  padding: 25px;
+}
+
+@media (max-width: 662px) {
+  .date_text {
+    font-size: 10px;
+    padding: 25px 0 0 0;
+    letter-spacing: 4px;
+  }
+}
+
+.description {
+  margin-top: 100px;
+}
+
+.description__logo {
+  margin-left: 15px;
+  cursor: pointer;
+}
